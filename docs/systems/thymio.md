@@ -4,13 +4,13 @@ Everything you need to get a Thymio II moving, sensing and running your own code
 
 | | |
 |---|---|
-| **Owner (PI)** | *Yara Khaluf and ?* |
-| **System champion** | * - * |
-| **Support tier** | * Lab Manager * |
-| **Robots in the lab** | *35-40* |
-| **Where they live** | *cabinet* |
-| **Code repository** | *link to lab git* |
-| **Last reviewed** | *date* |
+| **Owner (PI)** | Yara Khaluf and ? |
+| **System champion** |  None |
+| **Support tier** |  Lab Manager  |
+| **Robots in the lab** | 35-40 |
+| **Where they live** | cabinet |
+| **Code repository** | link to lab git |
+| **Last reviewed** | date |
 
 Values on this page describe the standard Thymio II. Check the lab repository for the exact software versions we use.
 
