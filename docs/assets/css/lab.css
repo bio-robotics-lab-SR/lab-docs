@@ -1,0 +1,64 @@
+/* Lab additions to the Material theme. Colours come from Material's own
+   variables, so everything follows the light/dark switch. */
+
+.beh-dot {
+  display: inline-block;
+  width: .8em;
+  height: .8em;
+  border-radius: 50%;
+  vertical-align: -.05em;
+  margin-right: .25em;
+}
+
+.anatomy {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 1.2rem;
+  align-items: start;
+  margin: 1em 0 1.5em;
+}
+@media (max-width: 760px) {
+  .anatomy { grid-template-columns: minmax(0, 1fr); }
+}
+.anatomy-robot,
+.anatomy-detail {
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: .4rem;
+  padding: .8rem;
+  min-width: 0;
+}
+.anatomy-robot svg { width: 100%; height: auto; display: block; }
+.anatomy-hint { text-align: center; font-size: .75rem; color: var(--md-default-fg-color--light); margin: .2rem 0 0; }
+
+.anatomy .body  { fill: var(--md-code-bg-color); stroke: var(--md-default-fg-color--lighter); stroke-width: 2.5; }
+.anatomy .wheel { fill: var(--md-default-fg-color--light); }
+.anatomy .under { fill: none; stroke: var(--md-default-fg-color--light); stroke-dasharray: 3 3; stroke-width: 2; }
+.anatomy .ring  { fill: none; stroke: var(--md-accent-fg-color); stroke-opacity: .35; stroke-width: 7; stroke-dasharray: 10 9; }
+.anatomy .lab   { font-family: var(--md-code-font-family); font-size: 11px; fill: var(--md-default-fg-color--light); }
+.anatomy .nopoint { pointer-events: none; }
+
+.anatomy .hs { cursor: pointer; }
+.anatomy .hs:focus { outline: none; }
+.anatomy .hs .mark {
+  fill: var(--md-default-bg-color);
+  stroke: var(--md-accent-fg-color);
+  stroke-width: 2.5;
+  transition: fill .15s;
+}
+.anatomy .hs:hover .mark,
+.anatomy .hs.on .mark { fill: var(--md-accent-fg-color); }
+.anatomy .hs:focus-visible .mark { stroke-width: 4; }
+
+.anatomy-detail h3 { margin-top: 0; }
+.anatomy-detail dl { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: .3rem .8rem; }
+.anatomy-detail dt { color: var(--md-default-fg-color--light); }
+.anatomy-detail dd { margin: 0; overflow-wrap: anywhere; }
+.anatomy-tip {
+  background: var(--md-accent-fg-color--transparent);
+  border-radius: .3rem;
+  padding: .5rem .7rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .anatomy .hs .mark { transition: none; }
+}

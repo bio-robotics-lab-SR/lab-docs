@@ -1,0 +1,74 @@
+{
+  "prox": {
+    "name": "Front proximity sensors",
+    "summary": "5 infrared sensors, indices 0–4 (left to right)",
+    "code": "prox.horizontal[0…4]",
+    "range": "0 (nothing) to about 4500 (touching); reach roughly 10 cm",
+    "event": "onevent prox · 10 Hz",
+    "tip": "Black, shiny or transparent objects reflect little infrared and look further away than they are. Test against the obstacles you will actually use."
+  },
+  "proxback": {
+    "name": "Back proximity sensors",
+    "summary": "2 infrared sensors, indices 5 (left) and 6 (right)",
+    "code": "prox.horizontal[5], [6]",
+    "range": "0 to about 4500; reach roughly 10 cm",
+    "event": "onevent prox · 10 Hz",
+    "tip": "Useful for detecting a robot following behind you in swarm experiments."
+  },
+  "ground": {
+    "name": "Ground sensors",
+    "summary": "2 infrared sensors underneath, facing down",
+    "code": "prox.ground.delta[0], [1]",
+    "range": "High on white, low on black (about 0–1000)",
+    "event": "onevent prox · 10 Hz",
+    "tip": "For line following use high-contrast tape on a matte floor. Calibrate thresholds on the arena floor itself, not on a desk."
+  },
+  "buttons": {
+    "name": "Touch buttons",
+    "summary": "5 capacitive buttons: forward, backward, left, right, centre",
+    "code": "button.forward, button.backward, button.left, button.right, button.center",
+    "range": "0 (released) or 1 (touched)",
+    "event": "onevent buttons · 20 Hz, or onevent button.center (etc.) on change",
+    "tip": "Holding the centre button for 3 seconds switches the robot off, so don't use a long centre press as an input."
+  },
+  "motors": {
+    "name": "Wheels and motors",
+    "summary": "2 independent DC motors",
+    "code": "motor.left.target, motor.right.target (set) · motor.left.speed, motor.right.speed (measured)",
+    "range": "−500 to 500 · 500 ≈ 20 cm/s",
+    "event": "—",
+    "tip": "Equal targets rarely give a perfectly straight line. Hair and dust on the wheels are the usual cause of drift; clean them before blaming your code."
+  },
+  "leds": {
+    "name": "LEDs",
+    "summary": "39 LEDs in total, including RGB top and bottom LEDs",
+    "code": "leds.top, leds.bottom.left, leds.bottom.right, leds.circle",
+    "range": "0 to 32 per colour channel",
+    "event": "call leds.top(r, g, b)",
+    "tip": "Giving each robot a colour by state is the cheapest debugging tool you have, and it shows up well in video recordings."
+  },
+  "inside": {
+    "name": "Internal sensors",
+    "summary": "3-axis accelerometer, thermometer, microphone",
+    "code": "acc[0…2] · temperature · mic.intensity",
+    "range": "acc −32 to 32 (1 g ≈ 23) · temperature in 0.1 °C · mic 0–255",
+    "event": "onevent acc · 16 Hz · onevent tap · onevent mic",
+    "tip": "The accelerometer detects bumps and lifts. Set mic.threshold before relying on onevent mic in a noisy lab."
+  },
+  "sound": {
+    "name": "Speaker and IR remote receiver",
+    "summary": "Speaker; infrared receiver for RC5 remote controls",
+    "code": "call sound.freq(Hz, duration) · call sound.system(n) · rc5.command",
+    "range": "duration in 1/60 s",
+    "event": "onevent rc5",
+    "tip": "Turn sounds off in shared sessions; ten beeping robots make the lab unusable for everyone else."
+  },
+  "usb": {
+    "name": "USB port and battery",
+    "summary": "Micro-USB for data and charging; built-in LiPo battery",
+    "code": "—",
+    "range": "A few hours of driving per charge",
+    "event": "—",
+    "tip": "Many cheap cables are charge-only and the robot won't be detected. Keep one known data cable marked at the lab bench."
+  }
+}
