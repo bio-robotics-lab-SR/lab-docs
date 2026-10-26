@@ -4,11 +4,11 @@ Everything you need to get a Thymio II moving, sensing and running your own code
 
 | | |
 |---|---|
-| **Owner (PI)** | *to fill in* |
-| **System champion** | *to fill in* |
-| **Support tier** | *to fill in* |
-| **Robots in the lab** | *number and ID range* |
-| **Where they live** | *cabinet / charging station* |
+| **Owner (PI)** | *Yara Khaluf and ?* |
+| **System champion** | * - * |
+| **Support tier** | * Lab Manager * |
+| **Robots in the lab** | *35-40* |
+| **Where they live** | *cabinet* |
 | **Code repository** | *link to lab git* |
 | **Last reviewed** | *date* |
 
